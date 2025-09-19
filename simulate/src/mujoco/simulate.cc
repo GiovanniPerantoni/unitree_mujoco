@@ -318,7 +318,8 @@ namespace
     memset(sim->figcost.linepnt, 0, mjMAXLINE * sizeof(int));
 
     // number of islands that have diagnostics
-    int nisland = mjMIN(d->solver_nisland, mjNISLAND);
+    // int nisland = mjMIN(d->solver_nisland, mjNISLAND);
+    int nisland = mjNISLAND;
 
     // iterate over islands
     for (int k = 0; k < nisland; k++)
@@ -610,7 +611,8 @@ namespace
     char tmp[20];
 
     // number of islands with statistics
-    int nisland = mjMIN(d->solver_nisland, mjNISLAND);
+    // int nisland = mjMIN(d->solver_nisland, mjNISLAND);
+    int nisland = mjNISLAND;
 
     // compute solver error (maximum over islands)
     mjtNum solerr = 0;
